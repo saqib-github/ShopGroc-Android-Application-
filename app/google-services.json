@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "838687403052",
+    "firebase_url": "https://shopgroc-d1ec8.firebaseio.com",
+    "project_id": "shopgroc-d1ec8",
+    "storage_bucket": "shopgroc-d1ec8.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:838687403052:android:a1265460812de1bbb6b589",
+        "android_client_info": {
+          "package_name": "com.example.shopgroc"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "838687403052-cvhkulnv6kpsolstkn83c7tksghqkcbj.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.shopgroc",
+            "certificate_hash": "6d70ecedfba0287408cba5c2156f11769fe42ba0"
+          }
+        },
+        {
+          "client_id": "838687403052-5ogknhe89v12qeveipqqrti8b21k331i.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDM_y1WwgCGIMkzhFoPqwvGpYzNNhKRVWg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "838687403052-5ogknhe89v12qeveipqqrti8b21k331i.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

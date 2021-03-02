@@ -1,0 +1,296 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/app_start_navigation"
+    app:startDestination="@id/landingFragment">
+    <fragment
+        android:id="@+id/landingFragment"
+        android:name="com.example.shopgroc.fragment.LandingFragment"
+        android:label="fragment_landing"
+        tools:layout="@layout/fragment_landing" >
+        <action
+            android:id="@+id/action_landingFragment_to_registrationFragment"
+            app:destination="@id/registrationFragment" />
+        <action
+            android:id="@+id/action_landingFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+        <action
+            android:id="@+id/action_landingFragment_self"
+            app:destination="@id/landingFragment" />
+        <action
+            android:id="@+id/action_landingFragment_to_storeLoginFragment2"
+            app:destination="@id/storeLoginFragment" />
+        <action
+            android:id="@+id/action_landingFragment_to_storeLoginFragment"
+            app:destination="@id/storeLoginFragment" />
+        <action
+            android:id="@+id/action_landingFragment_to_riderLoginFragment"
+            app:destination="@id/riderLoginFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.example.shopgroc.fragment.user.LoginFragment"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login" >
+        <action
+            android:id="@+id/action_loginFragment_to_registrationFragment"
+            app:destination="@id/registrationFragment" />
+        <action
+            android:id="@+id/action_loginFragment_to_homeScreenNavigation"
+            app:destination="@id/homeScreenNavigation" />
+        <action
+            android:id="@+id/action_loginFragment_to_landingFragment"
+            app:destination="@id/landingFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/registrationFragment"
+        android:name="com.example.shopgroc.fragment.user.RegistrationFragment"
+        android:label="fragment_registration"
+        tools:layout="@layout/fragment_registration" >
+        <action
+            android:id="@+id/action_registrationFragment_to_homeScreenNavigation"
+            app:destination="@id/homeScreenNavigation" />
+        <action
+            android:id="@+id/action_registrationFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+    </fragment>
+
+    <navigation
+        android:id="@+id/homeScreenNavigation"
+        app:startDestination="@id/navigation_dashboard">
+
+        <fragment
+            android:id="@+id/navigation_cart"
+            android:name="com.example.shopgroc.fragment.user.CartFragment"
+            android:label="fragment_cart"
+            tools:layout="@layout/fragment_cart">
+            <action
+                android:id="@+id/action_navigation_cart_to_itemDisplayFragment"
+                app:destination="@id/itemDisplayFragment" />
+            <action
+                android:id="@+id/action_navigation_cart_to_map_fragment"
+                app:destination="@id/map_fragment" />
+        </fragment>
+        <fragment
+            android:id="@+id/navigation_search"
+            android:name="com.example.shopgroc.fragment.user.SearchFragment"
+            android:label="fragment_search"
+            tools:layout="@layout/fragment_search" >
+            <action
+                android:id="@+id/action_navigation_search_to_itemDisplayFragment"
+                app:destination="@id/itemDisplayFragment" />
+        </fragment>
+        <fragment
+            android:id="@+id/navigation_notification"
+            android:name="com.example.shopgroc.fragment.user.NotificationFragment"
+            android:label="fragment_notification"
+            tools:layout="@layout/fragment_notification" />
+        <fragment
+            android:id="@+id/navigation_profile"
+            android:name="com.example.shopgroc.fragment.user.ProfileFragment"
+            android:label="fragment_profile"
+            tools:layout="@layout/fragment_profile" >
+            <action
+                android:id="@+id/action_navigation_profile_to_LoginFragment"
+                app:destination="@+id/loginFragment" />
+            <action
+                android:id="@+id/action_navigation_profile_to_order_History"
+                app:destination="@id/order_History" />
+            <action
+                android:id="@+id/action_navigation_profile_to_userProfileDisplay"
+                app:destination="@id/userProfileDisplay" />
+        </fragment>
+        <fragment
+            android:id="@+id/navigation_dashboard"
+            android:name="com.example.shopgroc.fragment.user.DashboardFragment"
+            android:label="fragment_dashboard"
+            tools:layout="@layout/fragment_dashboard" >
+            <action
+                android:id="@+id/action_navigation_dashboard_to_itemDisplayFragment"
+                app:destination="@id/itemDisplayFragment" />
+        </fragment>
+        <fragment
+            android:id="@+id/itemDisplayFragment"
+            android:name="com.example.shopgroc.fragment.user.ItemDisplayFragment"
+            android:label="fragment_item_display"
+            tools:layout="@layout/fragment_item_display" >
+            <action
+                android:id="@+id/action_itemDisplayFragment_to_navigation_cart"
+                app:destination="@id/navigation_cart" />
+            <action
+                android:id="@+id/action_itemDisplayFragment_to_navigation_dashboard"
+                app:destination="@id/navigation_dashboard" />
+        </fragment>
+        <fragment
+            android:id="@+id/map_fragment"
+            android:name="com.example.shopgroc.fragment.user.PlaceOrderFragment"
+            android:label="fragment_map_fragment"
+            tools:layout="@layout/fragment_place_order_fragment" >
+            <action
+                android:id="@+id/action_map_fragment_to_order_Confermation"
+                app:destination="@id/order_Confermation" />
+        </fragment>
+        <fragment
+            android:id="@+id/order_History"
+            android:name="com.example.shopgroc.fragment.user.OrderHistory"
+            android:label="fragment_order__history"
+            tools:layout="@layout/fragment_order__history" >
+            <action
+                android:id="@+id/action_order_History_to_orderDetailFragment"
+                app:destination="@id/orderDetailFragment" />
+        </fragment>
+        <fragment
+            android:id="@+id/orderDetailFragment"
+            android:name="com.example.shopgroc.fragment.user.OrderDetailFragment"
+            android:label="fragment_order_detail"
+            tools:layout="@layout/fragment_order_detail" />
+        <fragment
+            android:id="@+id/userProfileDisplay"
+            android:name="com.example.shopgroc.fragment.user.UserProfileDisplay"
+            android:label="fragment_user_profile_display"
+            tools:layout="@layout/fragment_user_profile_display" >
+            <action
+                android:id="@+id/action_userProfileDisplay_to_navigation_profile"
+                app:destination="@id/navigation_profile" />
+        </fragment>
+        <fragment
+            android:id="@+id/order_Confermation"
+            android:name="com.example.shopgroc.fragment.user.OrderConfirmation"
+            android:label="fragment_order__confermation"
+            tools:layout="@layout/fragment_order__confermation" >
+            <action
+                android:id="@+id/action_order_Confermation_to_navigation_dashboard"
+                app:destination="@id/navigation_dashboard" />
+        </fragment>
+    </navigation>
+    <fragment
+        android:id="@+id/storeLoginFragment"
+        android:name="com.example.shopgroc.fragment.store.StoreLoginFragment"
+        android:label="fragment_store_login"
+        tools:layout="@layout/fragment_store_login" >
+        <action
+            android:id="@+id/action_storeLoginFragment_to_StoreHomeScreenNavigation"
+            app:destination="@id/StoreHomeScreenNavigation" />
+    </fragment>
+    <navigation
+        android:id="@+id/StoreHomeScreenNavigation"
+        app:startDestination="@id/store_navigation_dashboard">
+
+        <fragment
+            android:id="@+id/store_navigation_dashboard"
+            android:name="com.example.shopgroc.fragment.store.StoreDashboard"
+            android:label="fragment_store_dashboard"
+            tools:layout="@layout/fragment_store_dashboard" >
+            <action
+                android:id="@+id/action_storeDashboard_to_addItemToStore"
+                app:destination="@id/addItemToStore" />
+            <action
+                android:id="@+id/action_store_navigation_dashboard_to_itemDisplayFragmentStore"
+                app:destination="@id/itemDisplayFragmentStore" />
+        </fragment>
+        <fragment
+            android:id="@+id/addItemToStore"
+            android:name="com.example.shopgroc.fragment.store.AddItemToStore"
+            android:label="fragment_add_item_to_store"
+            tools:layout="@layout/fragment_add_item_to_store" >
+            <action
+                android:id="@+id/action_addItemToStore_to_storeDashboard"
+                app:destination="@id/store_navigation_dashboard" />
+        </fragment>
+        <fragment
+            android:id="@+id/store_navigation_orders"
+            android:name="com.example.shopgroc.fragment.store.StoreOrderFragment"
+            android:label="fragment_store_order_fragment"
+            tools:layout="@layout/fragment_store_order_fragment" >
+            <action
+                android:id="@+id/action_store_navigation_orders_to_openUserOrder"
+                app:destination="@id/openUserOrder" />
+        </fragment>
+        <fragment
+            android:id="@+id/store_navigation_more"
+            android:name="com.example.shopgroc.fragment.store.StoreNavigationMore"
+            android:label="fragment_store_navigation_more"
+            tools:layout="@layout/fragment_store_navigation_more" />
+        <fragment
+            android:id="@+id/openUserOrder"
+            android:name="com.example.shopgroc.fragment.store.OpenUserOrder"
+            android:label="fragment_open_user_order"
+            tools:layout="@layout/fragment_open_user_order" >
+            <action
+                android:id="@+id/action_openUserOrder_to_store_navigation_dashboard"
+                app:destination="@id/store_navigation_dashboard" />
+        </fragment>
+        <fragment
+            android:id="@+id/itemDisplayFragmentStore"
+            android:name="com.example.shopgroc.fragment.store.ItemDisplayFragmentStore"
+            android:label="fragment_item_display_store"
+            tools:layout="@layout/fragment_item_display_store" >
+
+            <action
+                android:id="@+id/action_itemDisplayFragmentStore_to_updateStoreItem2"
+                app:destination="@id/updateStoreItem2" />
+        </fragment>
+        <fragment
+            android:id="@+id/updateStoreItem2"
+            android:name="com.example.shopgroc.fragment.store.UpdateStoreItem"
+            android:label="fragment_update_store_item"
+            tools:layout="@layout/fragment_update_store_item" >
+            <action
+                android:id="@+id/action_updateStoreItem2_to_store_navigation_dashboard"
+                app:destination="@id/store_navigation_dashboard" />
+        </fragment>
+    </navigation>
+
+
+    <fragment
+        android:id="@+id/riderLoginFragment"
+        android:name="com.example.shopgroc.fragment.rider.RiderLoginFragment"
+        android:label="fragment_rider_login"
+        tools:layout="@layout/fragment_rider_login" >
+        <action
+            android:id="@+id/action_riderLoginFragment_to_riderSignupFragment"
+            app:destination="@id/riderSignupFragment" />
+        <action
+            android:id="@+id/action_riderLoginFragment_to_riderHomeScreenNavigation"
+            app:destination="@id/riderHomeScreenNavigation" />
+    </fragment>
+    <fragment
+        android:id="@+id/riderSignupFragment"
+        android:name="com.example.shopgroc.fragment.rider.RiderSignupFragment"
+        android:label="fragment_rider_signup"
+        tools:layout="@layout/fragment_rider_signup" >
+        <action
+            android:id="@+id/action_riderSignupFragment_to_riderHomeScreenNavigation"
+            app:destination="@id/riderHomeScreenNavigation" />
+    </fragment>
+    <navigation
+        android:id="@+id/riderHomeScreenNavigation"
+        app:startDestination="@id/rider_navigation_request">
+
+        <fragment
+            android:id="@+id/rider_navigation_request"
+            android:name="com.example.shopgroc.fragment.rider.RiderNavigationRequests"
+            android:label="fragment_rider_navigation_request"
+            tools:layout="@layout/fragment_rider_navigation_request" >
+            <action
+                android:id="@+id/action_rider_navigation_request_to_confirmOrderByRider"
+                app:destination="@id/confirmOrderByRider" />
+        </fragment>
+        <fragment
+            android:id="@+id/rider_navigation_more"
+            android:name="com.example.shopgroc.fragment.rider.RiderNavigationMore"
+            android:label="fragment_rider_navigation_more"
+            tools:layout="@layout/fragment_rider_navigation_more" />
+        <fragment
+            android:id="@+id/confirmOrderByRider"
+            android:name="com.example.shopgroc.fragment.rider.ConfirmOrderByRider"
+            android:label="fragment_confirm_order_by_rider"
+            tools:layout="@layout/fragment_confirm_order_by_rider" >
+            <action
+                android:id="@+id/action_confirmOrderByRider_to_rider_navigation_request"
+                app:destination="@id/rider_navigation_request" />
+        </fragment>
+    </navigation>
+</navigation>
